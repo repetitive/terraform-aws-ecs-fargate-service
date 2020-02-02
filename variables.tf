@@ -131,3 +131,8 @@ variable "lb_health_check_path" {
   type        = string
   default     = "/"
 }
+
+variable "certificate_arn" {
+  description = "Certificate used by Load Balancer"
+  type        = string
+}
