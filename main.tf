@@ -264,7 +264,7 @@ resource "aws_lb_target_group" "lb_tg" {
 # ---------------------------------------------------------------------------------------------------------------------
 # AWS LOAD BALANCER -  Listener
 # ---------------------------------------------------------------------------------------------------------------------
-resource "aws_lb_listener" "listener" {
+resource "aws_lb_listener" "http_listener" {
   depends_on        = [aws_lb_target_group.lb_tg]
   load_balancer_arn = aws_lb.lb.arn
   port              = "80"
