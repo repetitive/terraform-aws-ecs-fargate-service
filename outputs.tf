@@ -64,12 +64,12 @@ output "lb_sg_arn" {
 
 output "lb_http_listener_arn" {
   description = "HTTP Listener ARN"
-  value = .aws_lb_listener.http_listener.arn
+  value = aws_lb_listener.http_listener.arn
 }
 
 output "lb_https_listener_arn" {
   description = "HTTPS Listener ARN"
-  value = .aws_lb_listener.https_listener.arn
+  value = aws_lb_listener.https_listener.arn
 }
 
 output "lb_sg_name" {
