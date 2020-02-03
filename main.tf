@@ -43,7 +43,7 @@ resource "aws_security_group" "ecs_tasks_sg" {
 # AWS ECS SERVICE
 # ---------------------------------------------------------------------------------------------------------------------
 resource "aws_ecs_service" "service" {
-  depends_on                         = [aws_lb_listener.listener]
+  depends_on                         = [aws_lb_listener.http_listener, aws_lb_listener.https_listener]
   name                               = "${var.name_preffix}-service"
   cluster                            = var.ecs_cluster_arn
   task_definition                    = var.task_definition_arn
