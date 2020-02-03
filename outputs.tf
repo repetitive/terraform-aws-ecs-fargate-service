@@ -62,6 +62,16 @@ output "lb_sg_arn" {
   value       = aws_security_group.lb_sg.arn
 }
 
+output "lb_http_listener_arn" {
+  description = "HTTP Listener ARN"
+  value = .aws_lb_listener.http_listener.arn
+}
+
+output "lb_https_listener_arn" {
+  description = "HTTPS Listener ARN"
+  value = .aws_lb_listener.https_listener.arn
+}
+
 output "lb_sg_name" {
   description = "$${var.name_preffix} Load Balancer Security Group - The name of the security group"
   value       = aws_security_group.lb_sg.name
